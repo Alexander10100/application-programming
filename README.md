@@ -10,8 +10,8 @@ ____
 
 ##### Скриншоты выполнения программы:
 
-![Пример 1](https://disk.yandex.ru/d/Xi1v_GH9KBp7Pg)
+![Пример 1](https://github.com/Alexander10100/application-programming/tree/main/lab_2/Screenshots_program_execution/128.png)
 
-![Пример 2](https://disk.yandex.ru/d/xeLgl99QKkmJgA)
+![Пример 2](https://github.com/Alexander10100/application-programming/tree/main/lab_2/Screenshots_program_execution/1003.png)
 
-![Пример 3](https://disk.yandex.ru/d/Go_JMgJzb-ENzw)
+![Пример 3](https://github.com/Alexander10100/application-programming/tree/main/lab_2/Screenshots_program_execution/256501.png)
