@@ -46,7 +46,7 @@ def main():
     while flag == 0:
         print('0 - шифровка/расшифровка\n'
               '1 - выход')
-        operation = input('Введите номер нужной операций - ')
+        operation = int(input('Введите номер нужной операций - '))
         if operation == 0:
             result, key = encryption(result, key, alphabet_low, alphabet_high)
             print(f'Результат - {result}')
