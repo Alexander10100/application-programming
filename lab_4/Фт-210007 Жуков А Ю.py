@@ -67,13 +67,16 @@ def sum_in_words(sum_in_number):
         return result_string
 
     original_string = str(sum_in_number)
+    if len(original_string) > 6:
+        return '!!число слишком большое!! А точнее > 999999'
+
 
     string_processing = translate(original_string)
     string_processing = " ".join(string_processing.split()).capitalize()
-    print(string_processing)
+    return string_processing
 
 
-def input_sorting(string, quantity):
+def input_sorting(string, quantity):  # Ввод данных
     common_list = []
     print(string)
     for i in range(1, quantity + 1):
@@ -82,33 +85,36 @@ def input_sorting(string, quantity):
     return common_list
 
 
+def combining_sorted_values(quantity, distance, price):  # Объединяем отсортированные значения
+    all_data = []
+    for j in range(quantity):
+        all_data += [distance[j] + price[j]]
+    return all_data
+
+
+def select_number_taxi_total_amount(all_data):  # Выбираем номер такси для каждого сотрудника
+    result = sorted(all_data, key=lambda x: x[1])
+    count = 0
+    number_taxi = []
+    for number in result:
+        count += (number[0] * number[2])
+        number_taxi.append(number[3])
+    print('Номер такси. Начиная от первого сотрудника, заканчивая последним')
+    print(number_taxi)
+    print(f'Сумма в рублях: {count}')
+    print(f'Сумма словами: {sum_in_words(count)}')
+
+
 quantity = int(input('Введите кколичество сотрудников '))
 
-string_distance = 'Введите расстояние в километрах от работы до дома каждого сотрудника по очереди.'
+string_distance = 'Введите расстояние в километрах от работы до дома каждого сотрудника по очереди'
 distance = input_sorting(string_distance, quantity)
 distance.sort()
 
-string_price = 'Введите тариф в рублях за проезд одного километра в каждом такси по очереди.'
+string_price = 'Введите тариф в рублях за проезд одного километра в каждом такси по очереди'
 price = input_sorting(string_price, quantity)
 price.sort(reverse=True)
 
-#  Объединяем отсортированные значения
-all_data = []
-for j in range(quantity):
-    all_data += [distance[j] + price[j]]
+all_data = combining_sorted_values(quantity, distance, price)
 
-#  Выбираем номер такси для каждого сотрудника
-result = sorted(all_data, key=lambda x: x[1])
-count = 0
-number_taxi = []
-for number in result:
-    print(number)
-    count += (number[0]*number[2])
-    number_taxi.append(number[3])
-print(number_taxi)
-print(count)
-sum_in_words(count)
-
-
-
-
+select_number_taxi_total_amount(all_data)
