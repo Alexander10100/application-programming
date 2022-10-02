@@ -16,6 +16,9 @@ ____
 ____
 ### Скриншоты выполнения программы:
 Пример 1
+
 ![Пример 1](/lab_4/Screenshots_program_execution/1.png)
+
 Пример 2
+
 ![Пример 2](/lab_4/Screenshots_program_execution/2.png)
