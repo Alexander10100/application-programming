@@ -79,7 +79,11 @@ def input_sorting(string, quantity):  # Ввод данных
     common_list = []
     print(string)
     for i in range(1, quantity + 1):
-        x = [[int(input(f'№{i} ')), i]]
+        try:
+            x = [[int(input(f'№{i} ')), i]]
+        except ValueError:
+            print("Введена не цифра. Попробуйте снова")
+            return
         common_list += x
     return common_list
 
@@ -106,13 +110,23 @@ def select_number_taxi_total_amount(all_data):  # Выбираем номер т
 
 def main():
     quantity = str(input('Введите кколичество сотрудников '))
+    try:
+        quantity = int(quantity)
+    except ValueError:
+        print("Введена не цифра. Попробуйте снова")
+        return
 
     string_distance = 'Введите расстояние в километрах от работы до дома каждого сотрудника по очереди'
     distance = input_sorting(string_distance, quantity)
+    if not distance:
+        return
     distance.sort()
 
     string_price = 'Введите тариф в рублях за проезд одного километра в каждом такси по очереди'
     price = input_sorting(string_price, quantity)
+    if not price:
+        return
+    distance.sort()
     price.sort(reverse=True)
 
     all_data = combining_sorted_values(quantity, distance, price)
