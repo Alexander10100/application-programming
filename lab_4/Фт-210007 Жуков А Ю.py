@@ -1,4 +1,4 @@
-def sum_in_words(sum_in_number):
+def sum_in_words(sum_in_number):  # Отвечает за вывод суммы словами. Код функции взят из 2 лабораторной
     units = ["один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
     units_thousand = ["одна", "две", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
     tens_10_19 = ["десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать",
@@ -6,7 +6,7 @@ def sum_in_words(sum_in_number):
     tens = ["двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"]
     hundreds = ["сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот"]
 
-    def number_interpretation(remains_division, result_string, number, intermediate_string):  # Перевод самих цифр
+    def number_interpretation(remains_division, result_string, number, intermediate_string):  # Перевод самих цифр в слова
         part_string, number_pass = '', ''
         if number == 0:
             part_string = ''
@@ -50,7 +50,7 @@ def sum_in_words(sum_in_number):
         elif 19 < x < 100:
             return rub(original_string[-1:])
 
-    def translate(original_string):
+    def translate(original_string):  # Определяет что надо добавить к строке
         result_string, number_pass = '', ''
         intermediate_string = original_string
         for number in original_string:
@@ -67,7 +67,7 @@ def sum_in_words(sum_in_number):
         return result_string
 
     original_string = str(sum_in_number)
-    if len(original_string) > 6:
+    if len(original_string) > 6:  # Программа не может выводить словами сумму от миллиона
         return '!!число слишком большое!! А точнее > 999999'
 
     string_processing = translate(original_string)
@@ -79,7 +79,7 @@ def input_sorting(string, quantity):  # Ввод данных
     common_list = []
     print(string)
     for i in range(1, quantity + 1):
-        try:
+        try:  # Проверка на число
             x = [[int(input(f'№{i} ')), i]]
         except ValueError:
             print("Введена не цифра. Попробуйте снова")
@@ -88,18 +88,18 @@ def input_sorting(string, quantity):  # Ввод данных
     return common_list
 
 
-def combining_sorted_values(quantity, distance, price):  # Объединяем отсортированные значения
+def combining_sorted_values(quantity, distance, price):  # Объединяем отсортированные значения в один список
     all_data = []
     for j in range(quantity):
         all_data += [distance[j] + price[j]]
     return all_data
 
 
-def select_number_taxi_total_amount(all_data):  # Выбираем номер такси для каждого сотрудника
-    result = sorted(all_data, key=lambda x: x[1])
+def select_number_taxi_total_amount(all_data):  # Выбираем номер такси для каждого сотрудника и выводим сумму
+    result = sorted(all_data, key=lambda x: x[1])  # Ставим сотрудников по порядку
     count = 0
     number_taxi = []
-    for number in result:
+    for number in result:  # Вычисляем сумму
         count += (number[0] * number[2])
         number_taxi.append(number[3])
     print('Номер такси. Начиная от первого сотрудника, заканчивая последним')
@@ -110,28 +110,30 @@ def select_number_taxi_total_amount(all_data):  # Выбираем номер т
 
 def main():
     quantity = str(input('Введите кколичество сотрудников '))
-    try:
+    try:  # Проверка на число
         quantity = int(quantity)
     except ValueError:
         print("Введена не цифра. Попробуйте снова")
         return
 
+    #  Запрашиваем растояния
     string_distance = 'Введите расстояние в километрах от работы до дома каждого сотрудника по очереди'
     distance = input_sorting(string_distance, quantity)
-    if not distance:
+    if not distance:  # если получаем пустой список останавливаем программу
         return
-    distance.sort()
+    distance.sort()  # сортируем список
 
+    #  Получаем данные о тарифах такси
     string_price = 'Введите тариф в рублях за проезд одного километра в каждом такси по очереди'
     price = input_sorting(string_price, quantity)
-    if not price:
+    if not price:  # если получаем пустой список останавливаем программу
         return
     distance.sort()
-    price.sort(reverse=True)
+    price.sort(reverse=True)  # сортируем список от большего к меньшему
 
-    all_data = combining_sorted_values(quantity, distance, price)
+    all_data = combining_sorted_values(quantity, distance, price)  # Объединяем списки
 
-    select_number_taxi_total_amount(all_data)
+    select_number_taxi_total_amount(all_data)  # Выбираем такси
 
 
 main()
