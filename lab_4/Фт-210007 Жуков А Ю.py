@@ -70,7 +70,6 @@ def sum_in_words(sum_in_number):
     if len(original_string) > 6:
         return '!!число слишком большое!! А точнее > 999999'
 
-
     string_processing = translate(original_string)
     string_processing = " ".join(string_processing.split()).capitalize()
     return string_processing
@@ -105,16 +104,20 @@ def select_number_taxi_total_amount(all_data):  # Выбираем номер т
     print(f'Сумма словами: {sum_in_words(count)}')
 
 
-quantity = int(input('Введите кколичество сотрудников '))
+def main():
+    quantity = str(input('Введите кколичество сотрудников '))
 
-string_distance = 'Введите расстояние в километрах от работы до дома каждого сотрудника по очереди'
-distance = input_sorting(string_distance, quantity)
-distance.sort()
+    string_distance = 'Введите расстояние в километрах от работы до дома каждого сотрудника по очереди'
+    distance = input_sorting(string_distance, quantity)
+    distance.sort()
 
-string_price = 'Введите тариф в рублях за проезд одного километра в каждом такси по очереди'
-price = input_sorting(string_price, quantity)
-price.sort(reverse=True)
+    string_price = 'Введите тариф в рублях за проезд одного километра в каждом такси по очереди'
+    price = input_sorting(string_price, quantity)
+    price.sort(reverse=True)
 
-all_data = combining_sorted_values(quantity, distance, price)
+    all_data = combining_sorted_values(quantity, distance, price)
 
-select_number_taxi_total_amount(all_data)
+    select_number_taxi_total_amount(all_data)
+
+
+main()
