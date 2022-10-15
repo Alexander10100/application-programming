@@ -25,6 +25,7 @@ def calculation_coefficients(amount, amount_line):
     if sum(coef) != 1:
         difference = 1 - sum(coef)
         coef[0] += difference
+    coef = list(map(lambda x: format(x, '.2f'), coef))
     return coef
 
 
@@ -38,13 +39,8 @@ def ckeck(string):
 
 
 criteria = entering_values('Введите цифрой количество критериев: ')
-
 matrix = creating_matrix(criteria)
-
 amount_line = [sum(i) for i in matrix]
-
 amount = sum(amount_line)
-
 coefficients = calculation_coefficients(amount, amount_line)
-
-print(coefficients)
+print(f'весовые коэффициенты: {coefficients}')
