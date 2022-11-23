@@ -2,7 +2,7 @@ from random import randint
 import logging
 
 
-def more_less(guessed_number, number):
+def more_less(guessed_number, number):  # Вывод больше меньше
     if guessed_number > number:
         print('Загаданное число больше')
         logging.info(f'Program printed Загаданное число больше')
@@ -10,7 +10,7 @@ def more_less(guessed_number, number):
         print('Загаданное число меньше')
 
 
-def guessing(guessed_number, attempts):
+def guessing(guessed_number, attempts):  # Угадывание числа
     for i in range(1, attempts + 1):
         print('Попытка №', i)
         logging.info(f'Попытка № {i}')
@@ -33,7 +33,7 @@ def guessing(guessed_number, attempts):
     logging.info(f'Program printed Вы не смогли отгадать число. Загаданное число - {guessed_number}')
 
 
-def ckeck(string):
+def ckeck(string):  # Проверка на целое число
     n = input(string)
     logging.info(f'Users input number {n}')
     try:
