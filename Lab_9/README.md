@@ -17,6 +17,6 @@ ____
 
 ![Пример 1](/lab_9/Screenshots_program_execution/1.png)
 
-Пример 2
+Пример 2. Тест программы для входных комбинаций N=10, k=5
 
 ![Пример 2](/lab_9/Screenshots_program_execution/2.png)
