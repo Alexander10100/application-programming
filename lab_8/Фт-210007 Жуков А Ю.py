@@ -19,7 +19,7 @@ def decision(numbers):
         print('1 - вытаскиваем один боченок\n'
               '2 - вытаскиваем боченки пока они не закончатся\n'
               '3 - прервать операции')
-        flag = ckeck('Укажите номер нужной операции - ')
+        flag = check('Укажите номер нужной операции - ')
         if flag == 1:
             numbers, result = out_keg(numbers, result)
         elif flag == 2:
@@ -29,17 +29,17 @@ def decision(numbers):
             print('Такой операции нет!')
 
 
-def ckeck(string):
+def check(string):
     n = input(string)
     try:
         n = int(n)
     except Exception:
         print('Введено не целое число. Попробуйте снова')
-        return ckeck(string)
+        return check(string)
     return int(n)
 
 
-N = ckeck('Введите числом количество бочонков - ')
+N = check('Введите числом количество бочонков - ')
 numbers = [i for i in range(1, N+1)]
 result = decision(numbers)
 print(f' Весь порядок {result}')
