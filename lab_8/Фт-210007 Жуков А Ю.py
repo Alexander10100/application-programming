@@ -5,6 +5,7 @@ import logging
 def out_keg(list_num, result):
     x = random.choice(list_num)
     print('Достали бочонок под номером ', x)
+    logging.info(f'Достали бочонок под номером {x}')
     list_num.remove(x)
     result.append(x)
     return list_num, result
@@ -20,6 +21,7 @@ def decision(numbers):
               '2 - вытаскиваем боченки пока они не закончатся\n'
               '3 - прервать операции')
         flag = check('Укажите номер нужной операции - ')
+        logging.info(f'Operation = {flag}')
         if flag == 1:
             numbers, result = out_keg(numbers, result)
         elif flag == 2:
@@ -27,19 +29,25 @@ def decision(numbers):
                 numbers, result = out_keg(numbers, result)
         else:
             print('Такой операции нет!')
+            logging.error('Incorrect operation')
 
 
 def check(string):
     n = input(string)
+    logging.info(f'Users input number {n}')
     try:
         n = int(n)
     except Exception:
         print('Введено не целое число. Попробуйте снова')
+        logging.error('Incorrect number')
         return check(string)
     return int(n)
 
 
+logging.basicConfig(level=logging.DEBUG, filename="log.log")
 N = check('Введите числом количество бочонков - ')
+logging.info(f'N = {N}')
 numbers = [i for i in range(1, N+1)]
 result = decision(numbers)
 print(f' Весь порядок {result}')
+logging.info(f'Sequence = {result}')
