@@ -24,4 +24,4 @@ ____
 Пример 3.Тест программы для координат (1; 1), (6; 3) с фигурой - ладья 
 
 
-![Пример 3](/lab_7/Screenshots_program_execution/2.png)
+![Пример 3](/lab_7/Screenshots_program_execution/3.png)
