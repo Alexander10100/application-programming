@@ -2,7 +2,7 @@ import random
 import logging
 
 
-def out_keg(list_num, result):
+def out_keg(list_num, result):  # Сообщаем о бочонке и заносим результат
     x = random.choice(list_num)
     print('Достали бочонок под номером ', x)
     logging.info(f'Достали бочонок под номером {x}')
@@ -11,7 +11,7 @@ def out_keg(list_num, result):
     return list_num, result
 
 
-def decision(numbers):
+def decision(numbers):  # Достаем бочонок
     result = []
     flag = 0
     while flag != 3:
@@ -32,7 +32,7 @@ def decision(numbers):
             logging.error('Incorrect operation')
 
 
-def check(string):
+def check(string):  # Проверка на целое число
     n = input(string)
     logging.info(f'Users input number {n}')
     try:
@@ -44,7 +44,7 @@ def check(string):
     return int(n)
 
 
-logging.basicConfig(level=logging.DEBUG, filename="log.log")
+logging.basicConfig(level=logging.DEBUG, filename="log.log")  # Создаем лог файл
 N = check('Введите числом количество бочонков - ')
 logging.info(f'N = {N}')
 numbers = [i for i in range(1, N+1)]
