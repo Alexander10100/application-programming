@@ -1,0 +1,40 @@
+INFO:root:User started program
+INFO:root:Users input number 2
+INFO:root:x1 = 2
+INFO:root:Users input number 1
+INFO:root:y1 = 1
+INFO:root:Users input number 3
+INFO:root:x2 = 3
+INFO:root:Users input number 3
+INFO:root:y2 = 3
+INFO:root:Users input number 1
+INFO:root:figure = 1
+INFO:root:Programm ended
+INFO:root:User started program
+INFO:root:Users input number 5
+INFO:root:x1 = 5
+INFO:root:Users input number 5
+INFO:root:y1 = 5
+INFO:root:Users input number 5
+INFO:root:x2 = 5
+INFO:root:Users input number 1
+INFO:root:y2 = 1
+INFO:root:Users input number 2
+INFO:root:figure = 2
+INFO:root:Programm ended
+INFO:root:User started program
+INFO:root:Users input number q
+ERROR:root:Incorrect number
+INFO:root:Users input number 1.2
+ERROR:root:Incorrect number
+INFO:root:Users input number 1
+INFO:root:x1 = 1
+INFO:root:Users input number 1
+INFO:root:y1 = 1
+INFO:root:Users input number 6
+INFO:root:x2 = 6
+INFO:root:Users input number 3
+INFO:root:y2 = 3
+INFO:root:Users input number 3
+INFO:root:figure = 3
+INFO:root:Programm ended
