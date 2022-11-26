@@ -1,0 +1,70 @@
+INFO:root:Users input number 7
+INFO:root:N = 7
+INFO:root:Users input number 1
+INFO:root:Operation = 1
+INFO:root:Достали бочонок под номером 1
+INFO:root:Users input number 1
+INFO:root:Operation = 1
+INFO:root:Достали бочонок под номером 3
+INFO:root:Users input number 2
+INFO:root:Operation = 2
+INFO:root:Достали бочонок под номером 7
+INFO:root:Достали бочонок под номером 2
+INFO:root:Достали бочонок под номером 5
+INFO:root:Достали бочонок под номером 6
+INFO:root:Достали бочонок под номером 4
+INFO:root:Sequence = [1, 3, 7, 2, 5, 6, 4]
+INFO:root:Users input number q
+ERROR:root:Incorrect number
+INFO:root:Users input number 1.1
+ERROR:root:Incorrect number
+INFO:root:Users input number 13
+INFO:root:N = 13
+INFO:root:Users input number q
+ERROR:root:Incorrect number
+INFO:root:Users input number 2
+INFO:root:Operation = 2
+INFO:root:Достали бочонок под номером 6
+INFO:root:Достали бочонок под номером 13
+INFO:root:Достали бочонок под номером 2
+INFO:root:Достали бочонок под номером 4
+INFO:root:Достали бочонок под номером 5
+INFO:root:Достали бочонок под номером 3
+INFO:root:Достали бочонок под номером 11
+INFO:root:Достали бочонок под номером 1
+INFO:root:Достали бочонок под номером 12
+INFO:root:Достали бочонок под номером 10
+INFO:root:Достали бочонок под номером 8
+INFO:root:Достали бочонок под номером 9
+INFO:root:Достали бочонок под номером 7
+INFO:root:Sequence = [6, 13, 2, 4, 5, 3, 11, 1, 12, 10, 8, 9, 7]
+INFO:root:Users input number 25
+INFO:root:N = 25
+INFO:root:Users input number 2
+INFO:root:Operation = 2
+INFO:root:Достали бочонок под номером 18
+INFO:root:Достали бочонок под номером 4
+INFO:root:Достали бочонок под номером 23
+INFO:root:Достали бочонок под номером 10
+INFO:root:Достали бочонок под номером 1
+INFO:root:Достали бочонок под номером 17
+INFO:root:Достали бочонок под номером 25
+INFO:root:Достали бочонок под номером 12
+INFO:root:Достали бочонок под номером 20
+INFO:root:Достали бочонок под номером 7
+INFO:root:Достали бочонок под номером 21
+INFO:root:Достали бочонок под номером 6
+INFO:root:Достали бочонок под номером 24
+INFO:root:Достали бочонок под номером 8
+INFO:root:Достали бочонок под номером 19
+INFO:root:Достали бочонок под номером 16
+INFO:root:Достали бочонок под номером 2
+INFO:root:Достали бочонок под номером 22
+INFO:root:Достали бочонок под номером 3
+INFO:root:Достали бочонок под номером 11
+INFO:root:Достали бочонок под номером 5
+INFO:root:Достали бочонок под номером 13
+INFO:root:Достали бочонок под номером 14
+INFO:root:Достали бочонок под номером 15
+INFO:root:Достали бочонок под номером 9
+INFO:root:Sequence = [18, 4, 23, 10, 1, 17, 25, 12, 20, 7, 21, 6, 24, 8, 19, 16, 2, 22, 3, 11, 5, 13, 14, 15, 9]
